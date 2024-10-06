@@ -32,17 +32,17 @@ namespace SoftwareMinimarket
         {
             string userInput = txt_user.Text;
             string passInput = txt_pass.Text;
-            // Validación de campos vacíos
+
             if (string.IsNullOrEmpty(userInput))
             {
                 MessageBox.Show("Por favor, ingrese el nombre de usuario.");
-                return; // Sale del método si el campo está vacío
+                return;
             }
 
             if (string.IsNullOrEmpty(passInput))
             {
                 MessageBox.Show("Por favor, ingrese la contraseña.");
-                return; // Sale del método si el campo está vacío
+                return;
             }
 
             List<entUsuario> listaUsuarios = logUsuario.Instancia.ListarUsuarios();
@@ -111,7 +111,6 @@ namespace SoftwareMinimarket
                 txt_user.ForeColor = Color.LightGray;
             }
         }
-
         private void txt_pass_Enter(object sender, EventArgs e)
         {
             if (txt_pass.Text == "CONTRASEÑA") 
